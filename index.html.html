@@ -3,44 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nirmal Kumar| Portfolio</title>
+  <meta name="description" content="Nirmal Kumar's Portfolio - Front-end Developer showcasing projects, skills, and experience">
+  <title>Nirmal Kumar | Portfolio</title>
   <link rel="stylesheet" href="style1.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <header>
-    <a href="#" class="logo">Nirmal.</a>
-    <nav>
-      <ul class="navlist">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- Skip to Main Content Link -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <header role="banner">
+    <a href="#home" class="logo" aria-label="Nirmal Kumar Portfolio Home">Nirmal.</a>
+    <nav role="navigation" aria-label="Main Navigation">
+      <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navlist" id="navlist">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
+  <main id="main-content">
 // Home Section Starts Here
   <section class="home" id="home">
     <div class="home-text">
       <h1>Nirmal Kumar</h1>
-      <h3>I'm a 
-        <span style="--i:4;" data-text="Coder" class="typing">Coder</span>
-      </h3>
+      <h2>I'm a 
+        <span style="--i:4;" data-text="Coder" class="typing" aria-label="Role: Coder Frontend Developer or Gamer">Coder</span>
+      </h2>
       <p><p>Passionate front-end developer crafting sleek, responsive, and high-performance digital experiences with precision and creativity.</p>
 </p>
-      <a href="Nirmal Resume.pdf" class="btn">Download CV</a>
-      <div class="social-icons">
-        <a href="https://github.com/NirmalKumar1626"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/nirmal-kumar-9116b7320?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B6zHDBt1oQZWwt7%2FUFCC5ew%3D%3D"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://www.instagram.com/rishabh_pathak_1626?igsh=MTlseTRxejVqaXlpdw=="><i class='bx bxl-instagram'></i></a>
+      <a href="Nirmal Resume.pdf" class="btn" aria-label="Download Nirmal's Resume (PDF)">Download CV</a>
+      <div class="social-icons" aria-label="Social media links">
+        <a href="https://github.com/NirmalKumar1626" aria-label="GitHub Profile"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/nirmal-kumar-9116b7320?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B6zHDBt1oQZWwt7%2FUFCC5ew%3D%3D" aria-label="LinkedIn Profile"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/rishabh_pathak_1626?igsh=MTlseTRxejVqaXlpdw==" aria-label="Instagram Profile"><i class='bx bxl-instagram'></i></a>
       </div>
     </div>
 
     <div class="home-img">
       <div class="circle"></div>
-      <img src="WhatsApp Image 2026-01-05 at 23.28.38.jpeg" alt="Profile Picture">
+      <img src="WhatsApp Image 2026-01-05 at 23.28.38.jpeg" alt="Nirmal Kumar Profile Picture">
     </div>
   </section>
   <!-- /* Home Section Ends Here */
@@ -48,14 +59,14 @@
  <section id="resume" class="resume-section">
   <h2 class="section-title">Resume</h2>
 
-  <div class="resume-tabs">
-    <button class="tab active">Education</button>
-    <button class="tab">Work Experience</button>
-    <button class="tab">Skills</button>
-    <button class="tab">Experience</button>
+  <div class="resume-tabs" role="tablist">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="education-panel">Education</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="experience-panel">Work Experience</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="skills-panel">Skills</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="experience2-panel">Experience</button>
   </div>
 
-  <div class="education">
+  <div class="education" id="education-panel" role="tabpanel">
     <h3 class="sub-title"><i class='bx bx-book'></i> Education</h3>
 
     <div class="edu-card">
@@ -93,95 +104,102 @@
    <section id="skills" class="skills-section">
     
   <h2 class="section-title">Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+  <div class="skills-grid" role="list">
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 skill" />
       <p>HTML</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 skill" />
       <p>CSS</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript skill" />
       <p>JavaScript</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React skill" />
       <p>React</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS skill" />
       <p>Tailwind</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git GitHub skill" />
       <p>Git & GitHub</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="OOPs" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Object-Oriented Programming skill" />
       <p>OOPs</p>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="DBMS" />
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Database Management skill" />
       <p>DBMS</p>
     </div>
   </div>
-</section>
+
   <!-- Next to learn -->
-   <h3 class="sub-title">Next to Learn</h3>
-<div class="skills-grid upcoming-skills">
-  <div class="skill-card">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
-    <p>MongoDB</p>
+  <h3 class="sub-title">Next to Learn</h3>
+  <div class="skills-grid upcoming-skills" role="list">
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB skill to learn" />
+      <p>MongoDB</p>
+    </div>
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform skill to learn" />
+      <p>Terraform</p>
+    </div>
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js skill to learn" />
+      <p>Node.js</p>
+    </div>
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js skill to learn" />
+      <p>Next.js</p>
+    </div>
+    <div class="skill-card" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript skill to learn" />
+      <p>TypeScript</p>
+    </div>
   </div>
-  <div class="skill-card">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" />
-    <p>Terraform</p>
-  </div>
-  <div class="skill-card">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-    <p>Node.js</p>
-  </div>
-  <div class="skill-card">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />
-    <p>Next.js</p>
-  </div>
-  <div class="skill-card">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
-    <p>TypeScript</p>
-  </div>
-</div>
-<!-- skills section ends here  -->
+</section>
+<!-- skills section ends here -->
  <!-- Certifications Section Starts Here -->
 
  <section id="certifications" class="certifications-section">
   <h2 class="section-title">Certifications</h2>
-  <div class="certifications-grid">
-    <div class="cert-card">
+  <div class="certifications-grid" role="list">
+    <div class="cert-card" role="listitem">
       <p>Foundation of Full Stack</p>
-      <a href="https://www.coursera.org/account/accomplishments/verify/UPWC9KA94FCV" class="cert-btn">View Certificate</a>
+      <a href="https://www.coursera.org/account/accomplishments/verify/UPWC9KA94FCV" class="cert-btn" aria-label="View Foundation of Full Stack Certificate">View Certificate</a>
     </div>
-    <div class="cert-card">
+    <div class="cert-card" role="listitem">
       <p>Technical Job Simulation</p>
-      <a href="f2e34928-023d-42e9-98cc-db1feb2174e5.pdf" class="cert-btn">View Certificate</a>
+      <a href="f2e34928-023d-42e9-98cc-db1feb2174e5.pdf" class="cert-btn" aria-label="View Technical Job Simulation Certificate">View Certificate</a>
     </div>
-    <div class="cert-card">
+    <div class="cert-card" role="listitem">
       <p>Database Management from Oracle</p>
-      <a href="#" class="cert-btn">View Certificate</a>
+      <a href="#" class="cert-btn" aria-label="View Database Management Certificate">View Certificate</a>
     </div>
-    <div class="cert-card">
+    <div class="cert-card" role="listitem">
       <p>McKinsey & Company Problem Solving Ability</p>
-      <a href="https://www.credly.com/badges/05e2e8f0-c30c-4a0b-a1dc-fef0d1a18e37/linked_in_profile" class="cert-btn">View Certificate</a>
+      <a href="https://www.credly.com/badges/05e2e8f0-c30c-4a0b-a1dc-fef0d1a18e37/linked_in_profile" class="cert-btn" aria-label="View McKinsey Problem Solving Certificate">View Certificate</a>
     </div>
-    <div class="cert-card">
+    <div class="cert-card" role="listitem">
       <p>NPTEL E-business</p>
-      <a href="E-Business.pdf" class="cert-btn">View Certificate</a>
+      <a href="E-Business.pdf" class="cert-btn" aria-label="View NPTEL E-Business Certificate">View Certificate</a>
     </div>
   </div>
 </section>
 
+<footer role="contentinfo">
+  <p>&copy; 2024 Nirmal Kumar. All rights reserved. | Designed & Developed with <span aria-label="love">❤</span></p>
+</footer>
+
+
   <!-- // Custom JS File -->
   <script src="script.js"></script>
+</main>
 </body>
 </html>
